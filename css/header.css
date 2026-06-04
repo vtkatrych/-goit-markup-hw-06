@@ -1,3 +1,18 @@
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header nav,
+.header .contacts {
+  display: none;
+}
+
 .logo {
   line-height: 1.33;
   letter-spacing: 0.03em;
@@ -6,17 +21,19 @@
   font-weight: 700;
   font-size: 18px;
   color: #2e2f42;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
+
 .logo span {
-  line-height: 1.16667;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  font-style: bold;
   color: #4d5ae5;
+}
+
+.burger-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .nav-list a {
@@ -41,7 +58,6 @@
   letter-spacing: 0.02em;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-size: 16px;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -66,39 +82,55 @@
   background-color: #404bbf;
 }
 
-.header {
-  border-bottom: 1px solid #e7e9fc;
+@media (min-width: 768px) {
+  .header nav,
+  .header .contacts {
+    display: block;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 76px;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .nav-list a {
+    display: inline-block;
+    padding: 24px 0;
+  }
+
+  .contacts {
+    margin-left: auto;
+  }
+
+  .contacts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contacts a {
+    display: block;
+    padding: 0;
+    font-size: 12px;
+  }
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-}
+@media (min-width: 1158px) {
+  .contacts ul {
+    flex-direction: row;
+    gap: 40px;
+  }
 
-.logo {
-  margin-right: 76px;
-}
-
-.nav-list {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-list a {
-  display: inline-block;
-  padding: 24px 0;
-}
-
-.contacts {
-  margin-left: auto;
-}
-
-.contacts ul {
-  display: flex;
-  gap: 40px;
-}
-
-.contacts a {
-  display: inline-block;
-  padding: 24px 0;
+  .contacts a {
+    font-size: 16px;
+    padding: 24px 0;
+  }
 }

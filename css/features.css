@@ -4,6 +4,7 @@
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .feature-text {
@@ -16,11 +17,12 @@
 
 .features-list {
   display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
 .feature-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  width: 100%;
 }
 
 .feature-title {
@@ -28,14 +30,7 @@
 }
 
 .feature-icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  background-color: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
 }
 
 .team-icon-container {
@@ -53,6 +48,40 @@
   background-color: #4d5ae5;
   height: 40px;
   width: 40px;
-  border-radius: 40px;
+  border-radius: 50px;
   margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .feature-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (min-width: 1158px) {
+  .feature-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .feature-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  feature-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
 }
