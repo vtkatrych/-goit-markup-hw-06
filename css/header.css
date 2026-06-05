@@ -8,6 +8,7 @@
   justify-content: space-between;
 }
 
+/* Ховаємо меню і контакти на мобілці */
 .header nav,
 .header .contacts {
   display: none;
@@ -27,13 +28,6 @@
 
 .logo span {
   color: #4d5ae5;
-}
-
-.burger-btn {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .nav-list a {
@@ -82,14 +76,30 @@
   background-color: #404bbf;
 }
 
-@media (min-width: 768px) {
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle-icon {
+  fill: #2e2f42;
+}
+
+@media screen and (min-width: 768px) {
+  /* Ховаємо бургер */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Показуємо меню і контакти */
   .header nav,
   .header .contacts {
     display: block;
-  }
-
-  .burger-btn {
-    display: none;
   }
 
   .logo {
@@ -123,7 +133,7 @@
   }
 }
 
-@media (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   .contacts ul {
     flex-direction: row;
     gap: 40px;
