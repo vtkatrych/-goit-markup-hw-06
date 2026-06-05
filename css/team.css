@@ -54,7 +54,6 @@
 
 .team-icon-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 24px;
@@ -81,7 +80,7 @@
   fill: #f4f4fd;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,7 +89,7 @@
   }
 }
 
-@media (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   .team-list {
     flex-wrap: nowrap;
     gap: 24px;

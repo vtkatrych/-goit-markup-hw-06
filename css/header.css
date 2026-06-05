@@ -8,7 +8,6 @@
   justify-content: space-between;
 }
 
-/* Ховаємо меню і контакти на мобілці */
 .header nav,
 .header .contacts {
   display: none;
@@ -22,8 +21,8 @@
   font-weight: 700;
   font-size: 18px;
   color: #2e2f42;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .logo span {
@@ -47,7 +46,6 @@
 
 .contacts a {
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-family: "Roboto", sans-serif;
@@ -91,19 +89,19 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* Ховаємо бургер */
   .menu-toggle {
     display: none;
   }
 
-  /* Показуємо меню і контакти */
   .header nav,
   .header .contacts {
     display: block;
   }
 
   .logo {
-    margin-right: 76px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 120px;
   }
 
   .nav-list {
@@ -127,13 +125,19 @@
   }
 
   .contacts a {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     display: block;
     padding: 0;
-    font-size: 12px;
   }
 }
 
 @media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
+
   .contacts ul {
     flex-direction: row;
     gap: 40px;
@@ -141,6 +145,8 @@
 
   .contacts a {
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     padding: 24px 0;
   }
 }
