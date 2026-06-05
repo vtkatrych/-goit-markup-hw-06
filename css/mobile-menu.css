@@ -112,9 +112,10 @@ nav {
 }
 
 .mobile-contacts-list a[href^="tel"] {
-  font-weight: 700;
-  font-size: 36px;
-  color: #4d5ae5;
+  font-weight: 500;
+  font-size: 20px;
+  color: #434455;
+  text-decoration: none;
 }
 
 .mobile-socials {

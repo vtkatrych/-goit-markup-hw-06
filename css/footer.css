@@ -35,6 +35,8 @@
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .footer-social-wrap {
@@ -77,6 +79,7 @@
 
 .footer-subscribe {
   text-align: center;
+  width: 100%;
 }
 
 .subscribe-title {
@@ -95,7 +98,7 @@
 }
 
 .subscribe-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   padding-left: 16px;
   background-color: transparent;
@@ -162,8 +165,16 @@
     text-align: left;
   }
 
+  .footer-text {
+    margin: 0;
+  }
+
   .footer-social-list {
     justify-content: flex-start;
+  }
+
+  .subscribe-input {
+    width: 264px;
   }
 
   .subscribe-form {
@@ -190,5 +201,6 @@
 
   .footer-subscribe {
     margin-left: auto;
+    width: auto;
   }
 }
